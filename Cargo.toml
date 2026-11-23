@@ -17,7 +17,7 @@ anyhow = "1.0"
 crossterm = { version = "0.29", features = ["event-stream"] }
 futures-util = "0.3"
 hex = "0.4"
-hmac = "0.12"
+hmac = "0.13"
 getrandom = "0.4"
 ratatui = { version = "0.30", default-features = false, features = ["crossterm"] }
 serde = { version = "1", features = ["derive"] }
