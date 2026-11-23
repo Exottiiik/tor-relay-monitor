@@ -1,0 +1,38 @@
+[package]
+name = "tor-relay-monitor"
+version = "0.5.3"
+default-run = "trm"
+edition = "2024"
+rust-version = "1.88"
+description = "A read-only terminal monitor for a local Tor relay"
+repository = "https://github.com/Exottiiik/tor-relay-monitor"
+readme = "README.md"
+keywords = ["tor", "relay", "monitor", "terminal", "tui"]
+categories = ["command-line-utilities"]
+license = "MIT"
+include = ["/src/**", "/tests/**", "/scripts/**", "/docs/**", "/.github/**", "/.gitattributes", "/.editorconfig", "/Cargo.toml", "/Cargo.lock", "/README.md", "/LICENSE", "/CHANGELOG.md", "/CONTRIBUTING.md", "/SECURITY.md", "/THIRD_PARTY_NOTICES.md", "/AGENTS.md", "/config.example.toml"]
+
+[dependencies]
+anyhow = "1.0"
+crossterm = { version = "0.29", features = ["event-stream"] }
+futures-util = "0.3"
+hex = "0.4"
+hmac = "0.12"
+getrandom = "0.4"
+ratatui = { version = "0.30", default-features = false, features = ["crossterm"] }
+serde = { version = "1", features = ["derive"] }
+sha2 = "0.10"
+tokio = { version = "1", features = ["rt", "macros", "net", "io-util", "sync", "time", "fs", "signal"] }
+toml = "1.2"
+time = { version = "0.3", features = ["parsing", "macros"] }
+zeroize = "1"
+
+[target.'cfg(unix)'.dependencies]
+libc = "0.2"
+
+[dev-dependencies]
+tempfile = "3"
+
+[profile.release]
+lto = "thin"
+strip = true

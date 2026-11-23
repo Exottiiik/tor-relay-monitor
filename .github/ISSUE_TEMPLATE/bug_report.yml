@@ -1,0 +1,30 @@
+name: Bug report
+description: Report incorrect data, a crash or a terminal display problem.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For security issues, use SECURITY.md and private reporting instead.
+        Remove relay identities, addresses, connection peers and sensitive paths.
+        Never include cookies, authentication exchanges or a complete torrc.
+  - type: input
+    id: version
+    attributes:
+      label: TRM version
+      description: Output of trm --version.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Linux distribution, Tor version, terminal size/type, SSH or local, socket or loopback TCP. Do not post real addresses.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps and observed behavior
+      description: Include expected behavior and a sanitized screenshot or minimal output when useful.
+    validations:
+      required: true

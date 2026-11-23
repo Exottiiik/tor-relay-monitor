@@ -1,0 +1,10 @@
+# Optional. Run with: trm --config ./config.example.toml
+# Uncomment exactly one endpoint, or leave both absent for Unix socket discovery.
+# socket = "/run/tor/control"
+# tcp = "127.0.0.1:9051"
+# cookie = "/var/lib/tor/control_auth_cookie"
+timeout_seconds = 5
+reconnect_seconds = 2
+poll_seconds = 15
+no_color = false
+ascii = false

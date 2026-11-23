@@ -1,0 +1,16 @@
+name: Feature request
+description: Suggest a read-only monitoring improvement.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What operator problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Keep local read-only monitoring, bounded memory and keyboard usability in mind.
+    validations:
+      required: true
